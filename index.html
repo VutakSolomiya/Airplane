@@ -3,13 +3,100 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Airplane tickets</title>
 </head>
 
 <body>
+    <div class="wrapper">
+        <div class="intro">
+            <div class="container">
+                <header class="header">
+                    <nav class="header__navbar">
+                        <div class="header__logo">
+                            <a href="#">
+                                <img src="/src/img/Logo.svg" alt="logos">
+                            </a>
+                        </div>
+                        <ul class="header__links">
+                            <a href="" class="header__links-item">
+                                <li>Home </li>
+                            </a>
+                            <a href="" class="header__links-item">
+                                <li>Booking</li>
+                            </a>
+                            <a href="" class="header__links-item">
+                                <li>Private Jet</li>
+                            </a>
+                            <a href="" class="header__links-item">
+                                <li>Specification</li>
+                            </a>
+                            <a href="" class="header__links-item">
+                                <li> Luxury Charters</li>
+                            </a>
+                            <a href="" class="header__links-item">
+                                <li>Membership</li>
+                            </a>
+                        </ul>
+                        <div class="header__buttons">
+                            <button class="header__button">Register</button>
+                            <button class="header__button">Sign In</button>
+                        </div>
+                    </nav>
+                </header>
 
+                <div class="intro__inner">
+                    <h1 class="intro__title">Enjoy <b> Reserved </b></h1>
+                    <h2 class="intro__subtitle"> Overhead bin space</h2>
+                    <a href="" class="intro__link">
+                        <div class="intro__explore">Explore Now</div>
+                        <i class="fa-solid fa-arrow-right intro__arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="booking">
+            <div class="container">
+                <div class="booking__inner">
+                    <div class="booking__header">
+                        <div class="booking__dropdowns">
+                            <ul class="booking__trip">Drop 1</ul>
+                            <ul class="booking__type">Drop 2</ul>
+                            <ul class="booking__person">Drop 3</ul>
+                        </div>
+                    </div>
+                    <div class="booking__body">
+                        <div class="booking__destination">
+                            <div class="booking__title">from</div>
+                            <div class="booking__abbreviation">lax</div>
+                            <div class="booking__airport">Los Angeles Intl Arpt,Los Angeles</div>
+                        </div>
+                        <div class="booking__reverse">
+                            <i class="fa-solid fa-arrow-right-arrow-left booking__revert"></i>
+                        </div>
+                        <div class="booking__destination">
+                            <div class="booking__title">to</div>
+                            <div class="booking__abbreviation">mia</div>
+                            <div class="booking__airport">Miami Intl,Miami</div>
+                        </div>
+                        <div class="booking__date">
+                            <div class="booking__date-departure"></div>
+                            <div class="booking__date-return"></div>
+                        </div>
+                    </div>
+                    <div class="booking__footer">3</div>
+                    <button class="booking__btn"></button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="https://kit.fontawesome.com/1861cbff23.js" crossorigin="anonymous"></script>
 
 </html>
