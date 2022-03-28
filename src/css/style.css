@@ -55,8 +55,216 @@ select {
   font: inherit;
 }
 
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
 body{
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 16px;
 }
+
+
+/* Container */
+
+.container{
+  width: 100%;
+  max-width: 1130px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+
+/* Header */
+
+.header__navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.header__links{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.header__links-item{
+  margin-right: 20px;
+  text-decoration: none;
+  color:#181818;
+  font-size: 14px;
+}
+
+.header__links-item::after{
+  content: '';
+  display: block;
+  height: 2px;
+  background: #181818;
+  width: 0;
+  transition: all .4s linear;
+}
+
+.header__links-item:hover::after{
+  width: 100%;
+}
+
+
+.header__button{
+  padding: 6px 25px;
+  border-radius: 5px;
+  transition: all .4s linear;
+  margin-right: 10px;
+}
+
+.header__button:last-child{
+  margin-right: 0;
+}
+.header__button:hover{
+    color:#FFF;
+    background: #656293;
+}
+/* Intro */
+
+.intro{
+  padding-top: 40px;
+  position: relative;
+  min-height: 100vh;
+  background-image: url('../img/bg-image.jpg');
+  background-size: cover;
+}
+
+.intro__inner{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Roboto', sans-serif;
+  text-transform: capitalize;
+  color: #151515;
+}
+
+.intro__title b{
+  text-transform: uppercase;
+  color: #656293;
+}
+
+.intro__title,
+.intro__subtitle{
+  font-size: 66px;
+  line-height: 1.2;
+}
+
+.intro__subtitle{
+  margin-bottom: 45px;
+}
+
+.intro__explore{
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 2px 5px;
+  transition: all .3s linear;
+
+}
+
+
+.intro__arrow{
+  display: inline-block;
+  vertical-align: middle;
+  transition: all .3s linear;
+  font-size: 22px;
+
+}
+
+
+
+.intro__link{
+  text-decoration: none;
+  color:#151515;
+}
+
+.intro__link:hover .intro__arrow{
+  margin-left: 7px;
+
+}
+
+.intro__link:hover .intro__explore{
+  
+    background-color:#656293;
+    color:#FFF;
+    border-radius: 5px;
+
+}
+
+
+
+/* Booking */
+
+.booking__inner{
+  padding: 35px 30px ;
+  box-shadow: 0px 30px 84px rgba(19, 10, 46, 0.08), 0px 8px 32px rgba(19, 10, 46, 0.07), 0px 3px 14px rgba(19, 10, 46, 0.03), 0px 1px 3px rgba(19, 10, 46, 0.13);
+  border-radius: 12px;
+ 
+}
+
+.booking__dropdowns{
+  display: flex;
+}
+
+
+.booking__body{
+  display: flex;
+  align-items: center;
+}
+
+.booking__destination{
+  width: 300px;
+  border: 1px solid #AAAAAA;
+  border-radius: 5px;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.booking__revert{
+  font-size: 20px;
+  padding: 5px;
+  border: 1px solid #AAAAAA;
+  border-radius: 50%;
+  transition: transform .5s linear;
+  margin: 0 7px;
+  cursor: pointer;
+}
+
+.booking__revert:hover{
+  transform:rotate(180deg);
+}
+.booking__title{
+  font-size: 14px;
+  color:#737373;
+  line-height: 21px;
+}
+.booking__abbreviation{
+  font-size: 24px;
+  font-weight: 600;
+  color: #151515;
+  
+}
+
+.booking__airport{
+  font-size: 14px;
+  color:#737373;
+  
+}
+
