@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="src/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="src/css/style.css">
+    
     <title>Airplane tickets</title>
 </head>
 
@@ -20,7 +21,7 @@
                     <nav class="header__navbar">
                         <div class="header__logo">
                             <a href="#">
-                                <img src="/src/img/Logo.svg" alt="logos">
+                                <img src="src/img/Logo.svg" alt="logos">
                             </a>
                         </div>
                         <ul class="header__links">
@@ -65,11 +66,44 @@
             <div class="container">
                 <div class="booking__inner">
                     <div class="booking__header">
-                        <div class="booking__dropdowns">
-                            <ul class="booking__trip">Drop 1</ul>
-                            <ul class="booking__type">Drop 2</ul>
-                            <ul class="booking__person">Drop 3</ul>
-                        </div>
+                        <ul class="booking__dropdowns">
+
+                            <li class="booking__dropdowns-header"><a href="#" class="booking__link">Round Trip
+                                    <img src="src/img/icons/arrow_drop_down.svg" alt="dropdown-arrow"
+                                        class="dropdown-arrow">
+                                </a>
+
+                                <ul class="booking__dropdown">
+                                    <li class="dropdown__item"><a href="#">Option 1</a></li>
+                                    <li class="dropdown__item"><a href="#">Option 2</a></li>
+                                    <li class="dropdown__item"><a href="#">Option 3</a></li>
+                                    <li class="dropdown__item"><a href="#">Option 4</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="booking__dropdowns-header"><a href="#" class="booking__link">Round Trip
+                                    <img src="src/img/icons/arrow_drop_down.svg" alt="dropdown-arrow"
+                                        class="dropdown-arrow">
+                                </a>
+                                <ul class="booking__dropdown">
+                                    <li class="dropdown__item"><a href="#">Option 5</a></li>
+                                    <li class="dropdown__item"><a href="#">Option 6</a></li>
+                                    <li class="dropdown__item"><a href="#">Option 7</a></li>
+                                    <li class="dropdown__item"><a href="#">Option 8</a></li>
+                                </ul>
+                            </li>
+                            <li class="booking__dropdowns-header"><a href="#" class="booking__link">Round Trip
+                                    <img src="src/img/icons/arrow_drop_down.svg" alt="dropdown-arrow"
+                                        class="dropdown-arrow">
+                                </a>
+                                <ul class="booking__dropdown">
+                                    <li class="dropdown__item"><a href="#">Option 9</a></li>
+                                    <li class="dropdown__item"><a href="#">Option 11</a></li>
+                                    <li class="dropdown__item"><a href="#">Option 12</a></li>
+                                    <li class="dropdown__item"><a href="#">Option 13</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                     <div class="booking__body">
                         <div class="booking__destination">
@@ -85,18 +119,38 @@
                             <div class="booking__abbreviation">mia</div>
                             <div class="booking__airport">Miami Intl,Miami</div>
                         </div>
-                        <div class="booking__date">
-                            <div class="booking__date-departure"></div>
-                            <div class="booking__date-return"></div>
+                        <div class="booking__dates">
+                            <div class="booking__departure">
+                                <div class="booking__title">departure</div>
+                                <div class="booking__date">Fri 15 Oct</div>
+                                <i class="fa-regular fa-calendar booking__calendar"></i>
+                                <div class="booking__buttons">
+                                    <span class="booking__btn">Prev</span>
+                                    <span class="booking__btn">Next</span>
+                                </div>
+                            </div>
+                            <div class="booking__return">
+                                <div class="booking__title">return</div>
+                                <div class="booking__date">Tue 19 Oct</div>
+                                <i class="fa-regular fa-calendar booking__calendar"></i>
+                                <div class="booking__buttons">
+                                    <span class="booking__btn">Prev</span>
+                                    <span class="booking__btn">Next</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="booking__footer">3</div>
-                    <button class="booking__btn"></button>
+                    <div class="booking__footer">
+                        Add Requirements
+                    </div>
+                    <button class="booking__button">Book Flights <img src="src/img/icons/arrow-right-white.svg"
+                            alt="arrow" class="white-arrow"></button>
+
                 </div>
             </div>
         </div>
     </div>
 </body>
-<script src="https://kit.fontawesome.com/1861cbff23.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/22da4557de.js" crossorigin="anonymous"></script>
 
 </html>
