@@ -44,6 +44,7 @@ buttonRevert.addEventListener('click', () => {
 
 window.addEventListener('scroll', () => {
     lazyScrollCheck();
+    fixedHeader()
     if (window.scrollY > 250) {
         booking.classList.add('visible');
     }
@@ -236,16 +237,46 @@ if (isMobile.any()) {
 
 const header = document.querySelector('.header');
 
+if (screen.width > 767) {
+    document.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('_fixed');
+        } else {
+            header.classList.remove('_fixed')
+        }
+    })
 
-document.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('_fixed');
+}
+
+function fixedHeader() {
+    if (screen.width > 767) {
+        if (window.scrollY > 50) {
+            header.classList.add('_fixed');
+        } else {
+            header.classList.remove('_fixed')
+        }
     } else {
-        header.classList.remove('_fixed')
+        if (window.scrollY > 55) {
+            header.classList.add('_mobile');
+        } else {
+            header.classList.remove('_mobile')
+        }
     }
-})
-console.log(window.scrollY)
+}
+// console.log(screen.width > 763)
 
+// Burger
+
+const burgerIcon = document.querySelector('.menu__icon');
+const burgerMenu = document.querySelector('.menu__body');
+if (burgerIcon) {
+
+    burgerIcon.addEventListener('click', () => {
+        document.body.classList.toggle('_lock');
+        burgerIcon.classList.toggle('_active');
+        burgerMenu.classList.toggle('_active');
+    })
+}
 
 // Scroll for sections
 
@@ -262,6 +293,12 @@ if (menuLinks.length > 0) {
         if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
             const goToBlock = document.querySelector(menuLink.dataset.goto);
             const goToBlockValue = goToBlock.getBoundingClientRect().top + scrollY - header.offsetHeight;
+
+            if (burgerIcon.classList.contains('_active')) {
+                document.body.classList.remove('_lock');
+                burgerIcon.classList.remove('_active');
+                burgerMenu.classList.remove('_active');
+            }
 
             window.scrollTo({
                 top: goToBlockValue,
